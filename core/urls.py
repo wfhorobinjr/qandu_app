@@ -7,5 +7,6 @@ urlpatterns = patterns('',
   url(r'^user/', include('django.contrib.auth.urls')),
   url(r'^question/create/$', QuestionCreateView.as_view(), name='question_create'),
   url(r'^question/$', QuestionListView.as_view(), name='question_list'),
-  url(r'^question/(?P<PK>\d+)/$', QuestionDetailView.as_view(), name='question_detail'),
+  url(r'^question/(?P<pk>\d+)/$', QuestionDetailView.as_view(), name='question_detail'),
+  url(r'^question/update/(?P<pk>\d+)/$', QuestionUpdateView.as_view(), name='question_update')
 )
